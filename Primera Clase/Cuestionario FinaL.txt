@@ -1,0 +1,61 @@
+¿Por qué es importante guardar la clave de forma segura?
+
+Para mantener la seguridad de quien tiene acceso, o bien, quien puede descifrar la clave
+
+Desafío 1
+Intenta modificar la clave guardada manualmente (abre el archivo y cambia un
+carácter). Luego intenta descifrar el mensaje. ¿Qué sucede?
+
+Anexo imagenes
+
+Desafío 2
+¿Qué pasa si intentas cifrar un mensaje muy largo (más de 190 caracteres)?
+Investiga las limitaciones de RSA.
+
+Anexo imagen, de mensaje de 200 caracteres.
+
+Las limitaciones del cifrado RSA incluyen:
+Tamaño de clave: Claves de menos de 2048 bits se consideran inseguras. 
+
+Velocidad: RSA es más lento que los algoritmos simétricos como AES. 
+
+Ataques de factorización: Si se encuentra una manera eficiente de factorizar un número, todo el esquema se rompe. 
+
+Computación cuántica: Algoritmos cuánticos como el de Shor amenazan con hacer obsoletos los sistemas basados en RSA. 
+
+
+A pesar de estas limitaciones, RSA sigue siendo una herramienta fundamental en la ciberseguridad moderna, y su comprensión es esencial para cualquier profesional del ámbito IT que trabaje con sistemas de seguridad y comunicaciones cifradas.
+
+Desafío 3
+Modifica el código para crear un pequeño sistema de registro y login que guarde múltiples usuarios y sus hashes en un archivo.
+
+
+Anexo imágenes
+
+Desafio 4
+
+Anexo programa en Python
+
+
+Cuestionario de Evaluación
+Responde estas preguntas basándote en lo aprendido:
+1.- ¿Cuál es la principal diferencia entre cifrado simétrico y asimétrico?
+
+La principal diferencia es que el cifrado simétrico usa una sola clave secreta para cifrar y descifrar, mientras que el cifrado asimétrico utiliza un par de claves: una pública para cifrar y una privada para descifrar
+
+2.- ¿Por qué usamos cifrado híbrido en el sistema de mensajería?
+para combinar la seguridad del cifrado asimétrico con la eficiencia del cifrado simétrico, permitiendo el intercambio seguro de claves y el cifrado de grandes cantidades de datos
+
+3.- ¿Para qué sirve el "salt" en el hash de contraseñas?
+Sirve para utilizar datos aleatorios como entrada adicional a una función hash que genera el hash de una contraseña. El objetivo del uso de salt es proteger contra ataques de diccionario o contra contraseñas con hashes mediante una tabla arcoíris.
+
+4.- ¿Qué pasaría si alguien intercepta un mensaje cifrado con RSA pero no tiene la clave privada?
+
+el mensaje será ilegible e imposible de descifrar. El cifrado RSA está diseñado para que solo la clave privada correspondiente pueda desencriptar un mensaje que se cifró con la clave pública. El texto cifrado permanece como una secuencia de números ininteligibles hasta que se usa la clave privada. 
+
+5.-¿Por qué no se puede "descifrar" un hash para obtener la contraseña
+original?
+El hash es irreversible y garantiza que incluso si alguien obtiene acceso a las contraseñas cifradas, no podrá descifrarlas nuevamente para convertirlas en las contraseñas originales
+
+6.-En el ejercicio de mensajería, ¿qué función cumple la firma digital?
+garantizar la autenticidad, integridad de los mensajes. En lugar de ser un simple texto, es un sello electrónico cifrado que ofrece un alto nivel de seguridad. 
